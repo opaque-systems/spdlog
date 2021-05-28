@@ -9,4 +9,4 @@ Additionally the following compiler flags need to be set:
 * `SPDLOG_NO_THREAD__ID`
 * `FMT_USE_INT128=0`
 
-This ensures that certain unsupported syscalls/library functions are used.
+This ensures that certain unsupported syscalls/library functions aren't used.
