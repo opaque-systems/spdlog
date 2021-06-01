@@ -6,7 +6,7 @@ where we replace any calls to `localtime` (not supported by OpenEnclave) with
 `gmtime`. This means that all reported times are in UTC.
 
 Additionally the following compiler flags need to be set:
-* `SPDLOG_NO_THREAD__ID`
+* `SPDLOG_NO_THREAD_ID`
 * `FMT_USE_INT128=0`
 
-This ensures that certain unsupported syscalls/library functions aren't used.
+This ensures that only supported syscalls/library functions are used.
