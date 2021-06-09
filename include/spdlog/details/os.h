@@ -86,7 +86,7 @@ SPDLOG_API bool is_color_terminal() SPDLOG_NOEXCEPT;
 
 // Determine if the terminal attached
 // Source: https://github.com/agauniyal/rang/
-SPDLOG_API bool in_terminal(FILE *file) SPDLOG_NOEXCEPT;
+SPDLOG_API bool in_terminal() SPDLOG_NOEXCEPT;
 
 #if (defined(SPDLOG_WCHAR_TO_UTF8_SUPPORT) || defined(SPDLOG_WCHAR_FILENAMES)) && defined(_WIN32)
 SPDLOG_API void wstr_to_utf8buf(wstring_view_t wstr, memory_buf_t &target);

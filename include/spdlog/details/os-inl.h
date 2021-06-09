@@ -425,11 +425,11 @@ SPDLOG_INLINE bool is_color_terminal() SPDLOG_NOEXCEPT
 
 // Determine if the terminal attached
 // Source: https://github.com/agauniyal/rang/
-SPDLOG_INLINE bool in_terminal(FILE *file) SPDLOG_NOEXCEPT
+SPDLOG_INLINE bool in_terminal() SPDLOG_NOEXCEPT
 {
 
 #ifdef _WIN32
-    return ::_isatty(_fileno(file)) != 0;
+    return false;
 #else
 // Enclave does not support isatty, so just never make the assumption we're
 // writing to a terminal. The only affect of this is colored logging won't
